@@ -1,13 +1,134 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.top {
+  z-index: 1000 !important;
+}
+
+.size {
+  width: 21% !important;
+}
+
+.fs {
+  font-size: 8px;
+  color: #000000, 15%;
+}
+
+.nav-bar {
+  background-color: #f5f6fa;
+}
+
+.main {
+  background-color: #f5f6fa;
+}
+
+a span {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.text::after {
+  display: none !important;
+}
+
+.dropdown-menu[data-bs-popper] {
+  top: 100% !important;
+  right: 0 !important;
+  left: auto !important;
+  margin-top: 0.125rem !important;
+}
+
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 25px !important;
+  margin-right: 3px;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  color: #ffffff !important;
+  background-color: #404c7d !important;
+}
+
+.sidebar {
+  background-color: #404c7d;
+  color: #ffffff !important;
+  height: 100vh !important;
+}
+
+
+.focus a,
+span {
+  color: #ffffff !important;
+  /* padding-left: 30px !important;  */
+}
+
+@media (max-width: 768px) {
+  .focus {
+    color: #ffffff !important;
+    background-color: transparent !important;
+    border-left: none !important;
+    margin-left: 0px !important;
+  }
+
+  .chart {
+    flex-direction: column !important;
+  }
+
+  .chart div {
+    border-left: none !important;
+    width: 100% !important;
+  }
+
+  .size {
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .sidebar {
+    height: auto !important;
+  }
+  .navbar-collapse {
+    position: absolute;
+    top: 54px;
+    left: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    height: 100vh;
+    float: left;
+    background-color: white;
+  }
+  .navbar-collapse.collapsing {
+    height: auto;
+    -webkit-transition: left 0.3s ease;
+    -o-transition: left 0.3s ease;
+    -moz-transition: left 0.3s ease;
+    transition: left 0.3s ease;
+    left: -100%;
+  }
+  .navbar-collapse.show {
+    left: 0;
+    -webkit-transition: left 0.3s ease-in;
+    -o-transition: left 0.3s ease-in;
+    -moz-transition: left 0.3s ease-in;
+    transition: left 0.3s ease-in;
+  }
 }
